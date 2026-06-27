@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evgeniya Solovyova — Technical Operations Manager & Senior IT Business Analyst</title>
+  <meta name="description" content="Senior IT Business Analyst & Operations Manager specialized in AI-driven automation, ERP architecture, and operational systems across UAE, US, and Europe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:    #F9F9F9;
+      --black:    #111111;
+      --cashmere: #D7C9BA;
+      --platinum: #E2E8F0;
+      --mid:      #6B6B6B;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px 64px;
+      background: rgba(249,249,249,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--platinum);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 40px; list-style: none; }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--black); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 140px 64px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; right: 0;
+      width: 45%; height: 100%;
+      background: var(--cashmere);
+      opacity: 0.18;
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .hero-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 32px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 6vw, 80px);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      max-width: 860px;
+      margin-bottom: 32px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--mid);
+    }
+    .hero-sub {
+      max-width: 560px;
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.75;
+      margin-bottom: 52px;
+    }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      display: inline-block;
+      padding: 16px 40px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .btn-primary:hover { background: #2a2a2a; transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block;
+      padding: 16px 40px;
+      border: 1px solid var(--black);
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    }
+    .btn-secondary:hover { background: var(--black); color: var(--white); }
+
+    /* ── METRICS STRIP ── */
+    .metrics {
+      background: var(--black);
+      color: var(--white);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+    .metric {
+      padding: 52px 32px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .metric:last-child { border-right: none; }
+    .metric-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: var(--cashmere);
+    }
+    .metric-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+    }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 120px 64px; }
+    .section-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+    .divider {
+      width: 48px; height: 1px;
+      background: var(--cashmere);
+      margin-bottom: 48px;
+    }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy { background: var(--white); }
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      max-width: 1200px;
+    }
+    .philosophy-body {
+      font-size: 17px;
+      color: var(--mid);
+      line-height: 1.85;
+    }
+    .pillars { display: flex; flex-direction: column; gap: 36px; }
+    .pillar {
+      padding: 32px;
+      border: 1px solid var(--platinum);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .pillar:hover { border-color: var(--cashmere); transform: translateY(-2px); }
+    .pillar-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .pillar-body { font-size: 14px; color: var(--mid); line-height: 1.75; }
+
+    /* ── EXPERTISE ── */
+    .expertise { background: var(--cashmere); background: linear-gradient(135deg, #EDE5DC 0%, var(--cashmere) 100%); }
+    .expertise-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 16px;
+    }
+    .expertise-card {
+      background: var(--white);
+      padding: 52px 40px;
+      transition: background 0.25s;
+    }
+    .expertise-card:hover { background: var(--black); color: var(--white); }
+    .expertise-card:hover .expertise-card-body { color: rgba(255,255,255,0.6); }
+    .expertise-card:hover .expertise-icon { border-color: rgba(255,255,255,0.15); color: var(--cashmere); }
+    .expertise-icon {
+      width: 48px; height: 48px;
+      border: 1px solid var(--platinum);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      margin-bottom: 28px;
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .expertise-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .expertise-card-body { font-size: 14px; color: var(--mid); line-height: 1.75; transition: color 0.25s; }
+
+    /* ── SKILLS ── */
+    .skills { background: var(--white); }
+    .skills-grid {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      max-width: 900px;
+    }
+    .skill-tag {
+      padding: 10px 22px;
+      border: 1px solid var(--platinum);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .skill-tag:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+
+    /* ── EXPERIENCE ── */
+    .experience { background: var(--white); padding-top: 0; }
+    .timeline { max-width: 860px; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      padding: 48px 0;
+      border-top: 1px solid var(--platinum);
+    }
+    .timeline-item:last-child { border-bottom: 1px solid var(--platinum); }
+    .timeline-meta { padding-top: 4px; }
+    .timeline-period {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--mid);
+      margin-bottom: 6px;
+    }
+    .timeline-company {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--mid);
+    }
+    .timeline-role {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .timeline-points { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .timeline-points li {
+      font-size: 14px;
+      color: var(--mid);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.65;
+    }
+    .timeline-points li::before {
+      content: '—';
+      position: absolute; left: 0;
+      color: var(--cashmere);
+      font-weight: 400;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+    }
+    .contact .section-heading { color: var(--white); margin: 0 auto 24px; }
+    .contact .section-tag { color: rgba(255,255,255,0.4); }
+    .contact-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.5);
+      max-width: 480px;
+      margin: 0 auto 52px;
+      line-height: 1.75;
+    }
+    .contact-links {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 72px;
+    }
+    .contact-link {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 32px;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .contact-link:hover { border-color: var(--cashmere); background: rgba(215,201,186,0.08); }
+    .contact-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 36px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── FADE-IN ANIMATION ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 20px 28px; }
+      .nav-links { gap: 24px; }
+      section { padding: 80px 28px; }
+      .hero { padding: 120px 28px 60px; }
+      .philosophy-grid { grid-template-columns: 1fr; gap: 48px; }
+      .expertise-cards { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr; }
+      .metric { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .timeline-item { grid-template-columns: 1fr; gap: 16px; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">Evgeniya Solovyova</a>
+    <ul class="nav-links">
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <p class="hero-tag fade-in">Technical Operations Manager &nbsp;·&nbsp; Senior IT Business Analyst &nbsp;·&nbsp; Dubai, UAE</p>
+    <h1 class="fade-in">
+      Architecting Flawless Operations.<br />
+      <em>Engineering Intelligent Systems.</em>
+    </h1>
+    <p class="hero-sub fade-in">
+      Translating complex business visions into scalable, AI-driven digital ecosystems — across the UAE, US, and Europe. 7+ years of turning operational chaos into elegant, high-impact architecture.
+    </p>
+    <div class="hero-ctas fade-in">
+      <a href="#contact" class="btn-primary">Secure an Operational Audit</a>
+      <a href="#experience" class="btn-secondary">View Track Record</a>
+    </div>
+  </section>
+
+  <!-- METRICS -->
+  <div class="metrics">
+    <div class="metric fade-in">
+      <div class="metric-num">7+</div>
+      <div class="metric-label">Years of Global<br>Operational Impact</div>
+    </div>
+    <div class="metric fade-in">
+      <div class="metric-num">2</div>
+      <div class="metric-label">ERP Systems Built<br>from Scratch &amp; API-Connected</div>
+    </div>
+    <div class="metric fade-in">
+      <div class="metric-num">∞</div>
+      <div class="metric-label">Custom AI-Driven<br>Ecosystems Deployed</div>
+    </div>
+  </div>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy" id="philosophy">
+    <div class="philosophy-grid">
+      <div class="fade-in">
+        <span class="section-tag">Philosophy</span>
+        <h2 class="section-heading">System is Half<br>the Success.</h2>
+        <div class="divider"></div>
+        <p class="philosophy-body">
+          Unoptimized workflows, broken CRM loops, and repetitive manual routines are the silent killers of business velocity. I don't believe in temporary fixes.
+          <br /><br />
+          I map your business DNA, identify structural gaps, and build the automated infrastructure your team needs to deliver with absolute precision. When systems are seamlessly integrated and AI handles the heavy lifting, human intellect is liberated for strategy.
+        </p>
+      </div>
+      <div class="pillars fade-in">
+        <div class="pillar">
+          <div class="pillar-title">The Gap</div>
+          <p class="pillar-body">Bridging the communication vacuum between your business logic and technical execution — so requirements become reality without translation errors.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">The Speed</div>
+          <p class="pillar-body">Redesigning internal approvals and release processes to compress project timelines and eliminate friction at every stage of delivery.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">The Autopilot</div>
+          <p class="pillar-body">Implementing elite AI execution — Zapier, custom Claude Projects, GA4 automation — to reclaim your team's strategic hours for the work that actually matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="expertise" id="expertise">
+    <div class="fade-in">
+      <span class="section-tag">Core Pillars of Expertise</span>
+      <h2 class="section-heading">Where Precision<br>Meets Execution.</h2>
+    </div>
+    <div class="expertise-cards">
+      <div class="expertise-card fade-in">
+        <div class="expertise-icon">◈</div>
+        <div class="expertise-card-title">Business &amp; System Architecture</div>
+        <p class="expertise-card-body">End-to-end requirements engineering, process modeling (UML, BPMN), and UI/UX prototyping in Figma and Axure. Turning vague briefs into bulletproof technical specifications.</p>
+      </div>
+      <div class="expertise-card fade-in">
+        <div class="expertise-icon">⬡</div>
+        <div class="expertise-card-title">CRM &amp; Operational Ecosystems</div>
+        <p class="expertise-card-body">Configuration, automation, and integration of Zoho and AmoCRM. Designing synchronized data flows across platforms so your operations never skip a beat.</p>
+      </div>
+      <div class="expertise-card fade-in">
+        <div class="expertise-icon">◎</div>
+        <div class="expertise-card-title">AI-Driven Automation</div>
+        <p class="expertise-card-body">Custom AI solutions using Google Gems, Claude Projects, and Zapier pipelines. Automated GA4 analytics, content production, and high-volume dataset processing — engineered for scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="fade-in">
+      <span class="section-tag">Core Skills</span>
+      <h2 class="section-heading">The Technical Stack<br>Behind the Strategy.</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="skills-grid fade-in">
+      <span class="skill-tag">Business Requirements Analysis</span>
+      <span class="skill-tag">AI-Driven Solutions</span>
+      <span class="skill-tag">Figma &amp; Axure</span>
+      <span class="skill-tag">Process Modeling (UML, BPMN)</span>
+      <span class="skill-tag">Agile · Scrum · Kanban</span>
+      <span class="skill-tag">Jira &amp; Confluence</span>
+      <span class="skill-tag">SQL &amp; Data Management</span>
+      <span class="skill-tag">API Integration</span>
+      <span class="skill-tag">Zoho / AmoCRM</span>
+      <span class="skill-tag">Zapier Automation</span>
+      <span class="skill-tag">Draw.io · PlantUML · BPMN.io</span>
+      <span class="skill-tag">Stakeholder Engagement</span>
+      <span class="skill-tag">ERP Architecture</span>
+      <span class="skill-tag">Digital Marketing &amp; GA4</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="fade-in">
+      <span class="section-tag">Experience</span>
+      <h2 class="section-heading">Track Record.</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">Nov 2025 — Present</div>
+          <div class="timeline-company">Prime Collection Real Estate LLC, Dubai</div>
+        </div>
+        <div>
+          <div class="timeline-role">Operations Manager &amp; IT System / Business Analyst</div>
+          <ul class="timeline-points">
+            <li>Implemented AI-driven ecosystems using Google Gems and Claude Projects for automated GA4 analysis, content production, and high-volume dataset processing.</li>
+            <li>Managed and configured Zoho CRM end-to-end; authored PRD for AmoCRM implementation.</li>
+            <li>Designed automated data synchronization workflows across Facebook, Google Sheets, and Telegram bots via Zapier.</li>
+            <li>Launched a company landing page using AI-driven design and development tools.</li>
+            <li>Optimized performance marketing and lead generation analytics; coordinated cross-department operations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">May 2021 — Nov 2025</div>
+          <div class="timeline-company">Syberry</div>
+        </div>
+        <div>
+          <div class="timeline-role">IT Business Analyst</div>
+          <ul class="timeline-points">
+            <li>Built 2 independent ERP systems from scratch, interconnected via custom API integrations.</li>
+            <li>Delivered 5+ API integrations with external platforms, expanding product capabilities across multiple domains.</li>
+            <li>Led UI/UX prototyping initiatives that measurably improved usability and user engagement.</li>
+            <li>Redesigned internal approval workflows, significantly compressing project timelines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">Sep 2024 — Dec 2025</div>
+          <div class="timeline-company">Freelance</div>
+        </div>
+        <div>
+          <div class="timeline-role">Head of IT &amp; Business Analyst</div>
+          <ul class="timeline-points">
+            <li>Assembled and led a new team to deliver two websites from scratch — live with paid traffic and SEO optimization.</li>
+            <li>Built operational workflows for marketing and IT teams from the ground up.</li>
+            <li>Introduced AI-driven automation for daily tasks, freeing team capacity for strategic priorities.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-meta">
+          <div class="timeline-period">Dec 2019 — May 2021</div>
+          <div class="timeline-company">GP Solutions</div>
+        </div>
+        <div>
+          <div class="timeline-role">Business / System Analyst</div>
+          <ul class="timeline-points">
+            <li>Automated software release processes, improving time-to-market efficiency.</li>
+            <li>Customized ERP systems to improve search functionality and user experience.</li>
+            <li>Developed API integration for flight seat selection feature.</li>
+            <li>Led Agile transformation, enhancing sprint velocity and team performance.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <span class="section-tag fade-in">Get in Touch</span>
+    <h2 class="section-heading fade-in">Ready to Engineer<br>Your Next System?</h2>
+    <p class="contact-sub fade-in">
+      Let's look at the architectural data to see where your bottleneck is — and build the infrastructure that eliminates it.
+    </p>
+    <div class="contact-links fade-in">
+      <a href="mailto:solovyova.jenia@gmail.com" class="contact-link">
+        <span>✉</span> Email Me
+      </a>
+      <a href="https://www.linkedin.com/in/evgeniya-solovyova/" target="_blank" rel="noopener" class="contact-link">
+        <span>in</span> LinkedIn
+      </a>
+    </div>
+    <div class="contact-bottom fade-in">
+      © 2026 Evgeniya Solovyova &nbsp;·&nbsp; Dubai, UAE &nbsp;·&nbsp; Available globally
+    </div>
+  </section>
+
+  <script>
+    // Fade-in on scroll
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
